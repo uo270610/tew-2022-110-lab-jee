@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="html_new" deleted="false" description="Facelet JSF básico" enabled="true" name="New Facelet Básico">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:f="http://java.sun.com/jsf/core"&gt;
+&lt;h:head&gt;
+&lt;title&gt;Cabecera&lt;/title&gt; 
+&lt;/h:head&gt;
+&lt;h:body&gt;
+
+&lt;!-- Aquí va tu código --&gt;
+
+&lt;/h:body&gt;
+&lt;/html&gt;</template></templates>
