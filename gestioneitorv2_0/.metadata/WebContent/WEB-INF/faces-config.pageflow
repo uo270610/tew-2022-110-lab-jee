@@ -6,13 +6,13 @@
   <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="967" id="pf15057527326416" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf15057527326417" path="*"/>
   <nodes xsi:type="pageflow:PFPage" name="error.xhtml" x="338" y="967" id="pf15057527326418" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf15057527326417" path="/error.xhtml"/>
   <nodes xsi:type="pageflow:PFPage" name="editForm.xhtml" x="338" y="583" id="pf150575341327012" referenceLink="//@navigationRule.4/@navigationCase.1/@toViewId|" outlinks="pf150575484919813" inlinks="pf150575341327011" path="/editForm.xhtml"/>
-  <links id="pf15057527326412" target="pf15057527326414" source="pf15057527326411"/>
-  <links id="pf15057527326413" target="pf15057527326415" source="pf15057527326411"/>
-  <links id="pf15057527326417" target="pf15057527326418" source="pf15057527326416"/>
-  <links id="pf15057532894929" target="pf15057527326414" source="pf15057527326415"/>
-  <links id="pf150575341327011" target="pf150575341327012" source="pf15057527326414"/>
-  <links id="pf150575484919813" target="pf15057527326414" source="pf150575341327012"/>
-  <links id="pf150575341327010" target="pf15057527326414" source="pf15057527326414">
+  <links id="pf15057527326412" target="pf15057527326414" source="pf15057527326411" outcome="exito" fromaction="#{controller.listado}"/>
+  <links id="pf15057527326413" target="pf15057527326415" source="pf15057527326411" outcome="alta"/>
+  <links id="pf15057527326417" target="pf15057527326418" source="pf15057527326416" outcome="error"/>
+  <links id="pf15057532894929" target="pf15057527326414" source="pf15057527326415" outcome="exito" fromaction="#{controller.salva}"/>
+  <links id="pf150575341327011" target="pf150575341327012" source="pf15057527326414" outcome="editar"/>
+  <links id="pf150575484919813" target="pf15057527326414" source="pf150575341327012" outcome="exito" fromaction="#{controller.salva}"/>
+  <links id="pf150575341327010" target="pf15057527326414" source="pf15057527326414" outcome="exito" fromaction="#{controller.baja}">
     <bendPoints d1Height="-36" d2Height="-36"/>
     <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
     <bendPoints d1Width="-64" d2Width="-64"/>
