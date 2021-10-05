@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15057518588100" configfile="/gestioneitorv2_0/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="122" y="380" id="pf15057527326411" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf15057527326412 pf15057527326413" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="listado.xhtml" x="554" y="380" id="pf15057527326414" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf150575341327010 pf150575341327011" inlinks="pf15057527326412 pf15057532894929 pf150575341327010 pf150575484919813" path="/listado.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="altaForm.xhtml" x="338" y="178" id="pf15057527326415" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf15057532894929" inlinks="pf15057527326413" path="/altaForm.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="967" id="pf15057527326416" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf15057527326417" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="error.xhtml" x="338" y="967" id="pf15057527326418" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf15057527326417" path="/error.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="editForm.xhtml" x="338" y="583" id="pf150575341327012" referenceLink="//@navigationRule.4/@navigationCase.1/@toViewId|" outlinks="pf150575484919813" inlinks="pf150575341327011" path="/editForm.xhtml"/>
+  <links id="pf15057527326412" target="pf15057527326414" source="pf15057527326411"/>
+  <links id="pf15057527326413" target="pf15057527326415" source="pf15057527326411"/>
+  <links id="pf15057527326417" target="pf15057527326418" source="pf15057527326416"/>
+  <links id="pf15057532894929" target="pf15057527326414" source="pf15057527326415"/>
+  <links id="pf150575341327011" target="pf150575341327012" source="pf15057527326414"/>
+  <links id="pf150575484919813" target="pf15057527326414" source="pf150575341327012"/>
+  <links id="pf150575341327010" target="pf15057527326414" source="pf15057527326414">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+</pageflow:Pageflow>

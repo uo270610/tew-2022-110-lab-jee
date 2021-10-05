@@ -8,14 +8,15 @@
 </h:head>
 <h:body>
 
+<!-- Aqu� va tu c�digo -->
 <h:form>
 <h:panelGrid columns="2">
- NOMBRE: <h:inputText value="#{controller.alumno.nombre}"/>
- APELLIDOS: <h:inputText value="#{controller.alumno.apellidos}"/>
- USERID: <h:inputText value="#{controller.alumno.iduser}"/>
- EMAIL: <h:inputText value="#{controller.alumno.email}"/>
+  NOMBRE:     <h:inputText value="#{controller.alumno.nombre}"/>
+  APELLIDOS:  <h:inputText value="#{controller.alumno.apellidos}"/>
+  USERID:     <h:inputText value="#{controller.alumno.iduser}"/>
+  EMAIL:      <h:inputText value="#{controller.alumno.email}"/>
 </h:panelGrid>
- <h:commandButton value="Editar" action="#{controller.edit}"/>
+  <h:commandButton value="Salvar" action="#{controller.salva}"/>
 </h:form>
 
 </h:body>
