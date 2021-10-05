@@ -2,22 +2,23 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-       xmlns:f="http://java.sun.com/jsf/core">
+       xmlns:f="http://java.sun.com/jsf/core"
+       xmlns:p="http://primefaces.org/ui">
 <h:head>
 <title>Cabecera</title> 
 </h:head>
 <h:body>
 
 <!-- Aqu� va tu c�digo -->
-
 <h:form>
-<!-- Se invoca a un action controller (controller.listado) que retornará la etiqueta de navegación oportuna: éxito o error -->
-  <h:commandLink value="Listado de alumnos" action="#{controller.listado}"/> 
-  <br></br>
-<!-- Aquí --> 
-  <br></br>
-  <h:commandLink value="Alta de alumno" action="alta" actionListener="#{controller.iniciaAlumno}"/>
+<p:menubar>
+ <p:menuitem value="Gestioneitorv2.1"> </p:menuitem>
+ <p:submenu label="Gestion de alumnos">
+ <p:menuitem value="Alta" action="alta" actionListener="#{controller.iniciaAlumno}"> 
+ </p:menuitem>
+ <p:menuitem value="Listado Alumnos" action="#{controller.listado}"></p:menuitem>
+ </p:submenu>
+</p:menubar>
 </h:form>
-
 </h:body>
 </html>

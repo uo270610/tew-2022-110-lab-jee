@@ -2,7 +2,8 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-       xmlns:f="http://java.sun.com/jsf/core">
+       xmlns:f="http://java.sun.com/jsf/core"
+       xmlns:p="http://primefaces.org/ui">
 <h:head>
 <title>Cabecera</title> 
 </h:head>
@@ -10,24 +11,24 @@
 
 <!-- Aqu� va tu c�digo -->
 <h:form>
-<h:dataTable var="alumno" 
+<p:dataTable var="alumno" 
              value="#{controller.alumnos}"
              border="1">
-  <h:column><f:facet name="header">Nombre</f:facet>#{alumno.nombre}</h:column>
-  <h:column><f:facet name="header">Apellidos</f:facet>#{alumno.apellidos}</h:column>
-  <h:column><f:facet name="header">IdUser</f:facet>#{alumno.iduser}</h:column>
-  <h:column><f:facet name="header">Email</f:facet>#{alumno.email}</h:column>
-  <h:column><f:facet name="header">Baja</f:facet>
+  <p:column><f:facet name="header">Nombre</f:facet>#{alumno.nombre}</p:column>
+  <p:column><f:facet name="header">Apellidos</f:facet>#{alumno.apellidos}</p:column>
+  <p:column><f:facet name="header">IdUser</f:facet>#{alumno.iduser}</p:column>
+  <p:column><f:facet name="header">Email</f:facet>#{alumno.email}</p:column>
+  <p:column><f:facet name="header">Baja</f:facet>
      <h:commandLink action="#{controller.baja}" type="submit" value="BAJA" immediate="true">
          <f:setPropertyActionListener target="#{controller.alumno}" value="#{alumno}"/>
      </h:commandLink>
-  </h:column>
-  <h:column><f:facet name="header">Edición</f:facet>
+  </p:column>
+  <p:column><f:facet name="header">Edición</f:facet>
      <h:commandLink action="editar" type="submit" value="EDITAR" immediate="true">
          <f:setPropertyActionListener target="#{controller.alumno}" value="#{alumno}"/>
      </h:commandLink>
-  </h:column>
-</h:dataTable>
+  </p:column>
+</p:dataTable>
 </h:form>
 
 </h:body>

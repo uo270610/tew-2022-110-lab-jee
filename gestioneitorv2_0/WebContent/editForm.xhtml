@@ -2,7 +2,8 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-       xmlns:f="http://java.sun.com/jsf/core">
+       xmlns:f="http://java.sun.com/jsf/core"
+       xmlns:p="http://primefaces.org/ui">
 <h:head>
 <title>Cabecera</title> 
 </h:head>
@@ -10,12 +11,12 @@
 
 <!-- Aqu� va tu c�digo -->
 <h:form>
-<h:panelGrid columns="2">
-  NOMBRE:     <h:inputText value="#{controller.alumno.nombre}"/>
-  APELLIDOS:  <h:inputText value="#{controller.alumno.apellidos}"/>
-  USERID:     <h:inputText value="#{controller.alumno.iduser}"/>
-  EMAIL:      <h:inputText value="#{controller.alumno.email}"/>
-</h:panelGrid>
+<p:panelGrid columns="2">
+  NOMBRE:     <p:inputText value="#{controller.alumno.nombre}"/>
+  APELLIDOS:  <p:inputText value="#{controller.alumno.apellidos}"/>
+  USERID:     <p:inputText value="#{controller.alumno.iduser}"/>
+  EMAIL:      <p:inputText value="#{controller.alumno.email}"/>
+</p:panelGrid>
   <h:commandButton value="Salvar" action="#{controller.salva}"/>
 </h:form>
 
