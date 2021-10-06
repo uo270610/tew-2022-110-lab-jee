@@ -68,7 +68,7 @@
 
     <from-view-id>/listado.xhtml</from-view-id> 
     <navigation-case>
-      <from-action>#{controller.baja}</from-action>
+      <from-action>#{controller.baja(valumno)}</from-action>
       <from-outcome>exito</from-outcome>
       <to-view-id>/listado.xhtml</to-view-id>
      </navigation-case>

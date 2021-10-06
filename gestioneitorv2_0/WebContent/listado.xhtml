@@ -16,21 +16,21 @@
 
 <!-- Aqu� va tu c�digo -->
 <h:form>
-<p:dataTable var="alumno" 
+<p:dataTable var="valumno" 
              value="#{controller.alumnos}"
              border="1">
-  <p:column><f:facet name="header">Nombre</f:facet>#{alumno.nombre}</p:column>
-  <p:column><f:facet name="header">Apellidos</f:facet>#{alumno.apellidos}</p:column>
-  <p:column><f:facet name="header">IdUser</f:facet>#{alumno.iduser}</p:column>
-  <p:column><f:facet name="header">Email</f:facet>#{alumno.email}</p:column>
+  <p:column><f:facet name="header">Nombre</f:facet>#{valumno.nombre}</p:column>
+  <p:column><f:facet name="header">Apellidos</f:facet>#{valumno.apellidos}</p:column>
+  <p:column><f:facet name="header">IdUser</f:facet>#{valumno.iduser}</p:column>
+  <p:column><f:facet name="header">Email</f:facet>#{valumno.email}</p:column>
   <p:column><f:facet name="header">Baja</f:facet>
-     <h:commandLink action="#{controller.baja}" type="submit" value="BAJA" immediate="true">
-         <f:setPropertyActionListener target="#{controller.alumno}" value="#{alumno}"/>
+     <h:commandLink action="#{controller.baja(valumno)}" type="submit" value="BAJA" immediate="true">
+         <f:setPropertyActionListener target="#{controller.alumno}" value="#{valumno}"/>
      </h:commandLink>
   </p:column>
   <p:column><f:facet name="header">Edición</f:facet>
      <h:commandLink action="editar" type="submit" value="EDITAR" immediate="true">
-         <f:setPropertyActionListener target="#{controller.alumno}" value="#{alumno}"/>
+          actionListener="#{alumno.setAlumno(valumno)}
      </h:commandLink>
   </p:column>
 </p:dataTable>

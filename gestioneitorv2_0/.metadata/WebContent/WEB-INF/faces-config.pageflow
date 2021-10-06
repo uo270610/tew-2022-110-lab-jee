@@ -12,7 +12,7 @@
   <links id="pf15057532894929" target="pf15057527326414" source="pf15057527326415" outcome="exito" fromaction="#{controller.salva}"/>
   <links id="pf150575341327011" target="pf150575341327012" source="pf15057527326414" outcome="editar"/>
   <links id="pf150575484919813" target="pf15057527326414" source="pf150575341327012" outcome="exito" fromaction="#{controller.salva}"/>
-  <links id="pf150575341327010" target="pf15057527326414" source="pf15057527326414" outcome="exito" fromaction="#{controller.baja}">
+  <links id="pf150575341327010" target="pf15057527326414" source="pf15057527326414" outcome="exito" fromaction="#{controller.baja(valumno)}">
     <bendPoints d1Height="-36" d2Height="-36"/>
     <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
     <bendPoints d1Width="-64" d2Width="-64"/>
