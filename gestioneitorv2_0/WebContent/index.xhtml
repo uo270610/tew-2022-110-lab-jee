@@ -17,11 +17,11 @@
 <!-- Aqu� va tu c�digo -->
 <h:form>
 <p:menubar>
- <p:menuitem value="Gestioneitorv2.1"> </p:menuitem>
- <p:submenu label="Gestion de alumnos">
- <p:menuitem value="Alta" action="alta" actionListener="#{controller.iniciaAlumno}"> 
+ <p:menuitem value="#{msgs.tituloAplicacion1}"> </p:menuitem>
+ <p:submenu label="#{msgs.tituloAplicacion2}">
+ <p:menuitem value="#{msgs.tituloOperacionAlta}" action="alta" actionListener="#{controller.alumno.iniciaAlumno}"> 
  </p:menuitem>
- <p:menuitem value="Listado Alumnos" action="#{controller.listado}"></p:menuitem>
+ <p:menuitem value="#{msgs.tituloOperacionListado}" action="#{controller.listado}"></p:menuitem>
  </p:submenu>
 <f:facet name="options">
  <h:commandLink value="#{msgs.enlaceIdiomaES}"

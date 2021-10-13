@@ -1,30 +1,68 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-       xmlns:f="http://java.sun.com/jsf/core"
-       xmlns:p="http://primefaces.org/ui">
-<!-- Si se quisiera tomar el idioma del navegador --> 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<!-- Si se quisiera tomar el idioma del navegador -->
 <!-- <f:view locale="#{facesContext.externalContext.requestLocale}"> -->
 <!-- Para tomar el idioma del bean de configuración BeanSettings -->
 <f:view locale="#{settings.locale}">
 
-<h:head>
-<title>#{msgs.tituloHead}</title> 
-</h:head>
-<h:body>
+	<h:head>
+		<title>#{msgs.tituloHead}</title>
+	</h:head>
+	<h:body>
 
-<!-- Aqu� va tu c�digo -->
-<h:form>
-<p:panelGrid columns="2">
-  NOMBRE:     <p:inputText value="#{controller.alumno.nombre}"/>
-  APELLIDOS:  <p:inputText value="#{controller.alumno.apellidos}"/>
-  USERID:     <p:inputText value="#{controller.alumno.iduser}"/>
-  EMAIL:      <p:inputText value="#{controller.alumno.email}"/>
-</p:panelGrid>
-  <h:commandButton value= “#{msgs.botonSalvar}” action="#{controller.salva}"/>
+		<!-- Aqu� va tu c�digo -->
+		<h:form>
+			<p:panelGrid columns="2" styleClass="formTable">
+ #{msgs.nombre} 
+ <h:panelGroup>
+					<p:inputText value="#{alumno.nombre}" required="true"
+						requiredMessage="#{msgs.formAlta_nombre_requiredMessage}"
+						validatorMessage="#{msgs.formAlta_nombre_validatorMessage}"
+						id="nombre">
+						<f:validateLength maximum="20" />
+					</p:inputText>
+					<p:message for="nombre" />
+				</h:panelGroup>
+ #{msgs.apellidos} 
+ <h:panelGroup>
+					<p:inputText value="#{alumno.apellidos}" required="true"
+						requiredMessage="#{msgs.formAlta_apellidos_requiredMessage}"
+						validatorMessage="#{msgs.formAlta_apellidos_validatorMessage}"
+						id="apellidos">
+						<f:validateLength maximum="40" />
+					</p:inputText>
+					<p:message for="apellidos" />
+				</h:panelGroup>
+ #{msgs.userid}
+ <h:panelGroup>
+					<p:inputText value="#{alumno.iduser}" required="true"
+						requiredMessage="#{msgs.formAlta_iduser_requiredMessage}"
+						validatorMessage="#{msgs.formAlta_iduser_validatorMessage}"
+						id="iduser">
+						<f:validateLength minimum="5" maximum="8" />
+					</p:inputText>
+					<p:message for="iduser" />
+				</h:panelGroup> 
+ #{msgs.correo}
+ <h:panelGroup>
+					<p:inputText value="#{alumno.email}" required="true"
+						requiredMessage="#{msgs.formAlta_correo_requiredMessage}"
+						validatorMessage="#{msgs.formAlta_correo_validatorMessage}"
+						id="correo">
+						<f:validateRegex pattern=".+@.+\.[a-z]+" />
+					</p:inputText>
+					<p:message for="correo" />
+				</h:panelGroup>
+			</p:panelGrid>
+			<h:commandButton value="#{msgs.botonSalvar}"
+				action="#{controller.salva}">
+			</h:commandButton>
 </h:form>
 
-</h:body>
+	</h:body>
 </f:view>
 </html>
