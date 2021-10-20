@@ -30,8 +30,12 @@
 			<to-view-id>/faces/error.xhtml</to-view-id>
 		</navigation-case>
 		<navigation-case>
-			<from-outcome>casa</from-outcome>
+			<from-outcome>login</from-outcome>
 			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>casa</from-outcome>
+			<to-view-id>/opciones.xhtml</to-view-id>
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>alta</from-outcome>
@@ -71,4 +75,17 @@
 			<to-view-id>/listado.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
+	<navigation-rule>
+ <from-view-id>/index.xhtml</from-view-id>
+	<navigation-case>
+		<from-action>#{login.verify}</from-action>
+		<from-outcome>success</from-outcome>
+		<to-view-id>/opciones.xhtml</to-view-id>
+	</navigation-case>
+	<navigation-case>
+		<from-action>#{login.verify}</from-action>
+		<from-outcome>login</from-outcome>
+		<to-view-id>/index.xhtml</to-view-id>
+	</navigation-case>
+</navigation-rule>
 </faces-config>
