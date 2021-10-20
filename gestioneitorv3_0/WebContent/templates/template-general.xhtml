@@ -26,12 +26,12 @@
 				</tr>
 			</table>
 			<p:menubar>
-				<p:submenu label="#{msgs.tituloOpciones}" icon="ui-icon-document">
-					<p:menuitem value="#{msgs.enlaceListado}"
-						action="#{controller.listado}" />
-					<p:separator />
-					<p:menuitem value="#{msgs.enlaceAlta}" action="alta"
-						actionListener="#{alumno.iniciaAlumno}" />
+				<p:submenu style="float:right" label="#{msgs.textoIdioma}"
+					icon="ui-icon-document">
+					<p:menuitem value="#{msgs.enlaceIdiomaES}"
+						actionListener="#{settings.setSpanish}" update="@all" />
+					<p:menuitem value="#{msgs.enlaceIdiomaEN}"
+						actionListener="#{settings.setEnglish}" update="@all" />
 				</p:submenu>
 				<f:facet name="options">
 					<h:commandLink value="#{msgs.enlaceIdiomaES}"

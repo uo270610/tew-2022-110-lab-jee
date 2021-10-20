@@ -11,7 +11,7 @@
 
 	<ui:define name="cuerpo">
 		<h:form>
-			<p:dataTable var="valumno" value="#{controller.alumnos}" border="1">
+			<p:dataTable id="tablaListado" var="valumno" value="#{controller.alumnos}" border="1">
 				<p:column>
 					<f:facet name="header">#{msgs.tablaNombre}</f:facet>#{valumno.nombre}</p:column>
 				<p:column>
@@ -22,15 +22,15 @@
 					<f:facet name="header">#{msgs.tablaCorreo}</f:facet>#{valumno.email}</p:column>
 				<p:column>
 					<f:facet name="header">#{msgs.tablaBaja}</f:facet>
-					<h:commandLink action="#{controller.baja(valumno)}" type="submit"
-						value="#{msgs.tablaBaja}" immediate="true">
-					</h:commandLink>
+					<p:commandLink action="#{controller.baja(valumno)}" type="submit"
+						value="#{msgs.tablaBaja}" immediate="true" update="tablaListado">
+					</p:commandLink>
 				</p:column>
 				<p:column>
 					<f:facet name="header">#{msgs.tablaEditar}</f:facet>
-					<h:commandLink action="editar" type="submit" value="#{msgs.tablaEditar}"
+					<p:commandLink action="editar" type="submit" value="#{msgs.tablaEditar}"
 						actionListener="#{alumno.setAlumno(valumno)}" immediate="true">
-					</h:commandLink>
+					</p:commandLink>
 				</p:column>
 			</p:dataTable>
 		</h:form>
