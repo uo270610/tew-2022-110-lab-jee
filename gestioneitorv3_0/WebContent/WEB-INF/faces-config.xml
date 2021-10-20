@@ -22,6 +22,12 @@
 		<managed-bean-class>com.tew.presentation.BeanSettings</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
+	
+	<managed-bean>
+		<managed-bean-name>login</managed-bean-name>
+		<managed-bean-class>com.tew.presentation.BeanLogin</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
 
 	<navigation-rule>
 		<from-view-id>*</from-view-id>
@@ -35,44 +41,44 @@
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>casa</from-outcome>
-			<to-view-id>/opciones.xhtml</to-view-id>
+			<to-view-id>/restricted/opciones.xhtml</to-view-id>
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>alta</from-outcome>
-			<to-view-id>/altaForm.xhtml</to-view-id>
+			<to-view-id>/restricted/altaForm.xhtml</to-view-id>
 		</navigation-case>
 		<navigation-case>
 			<from-action>#{controller.listado}</from-action>
 			<from-outcome>exito</from-outcome>
-			<to-view-id>/listado.xhtml</to-view-id>
+			<to-view-id>/restricted/listado.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
-		<from-view-id>/listado.xhtml</from-view-id>
+		<from-view-id>/restricted/listado.xhtml</from-view-id>
 		<navigation-case>
 			<from-action>#{controller.baja(valumno)}</from-action>
 			<from-outcome>exito</from-outcome>
-			<to-view-id>/listado.xhtml</to-view-id>
+			<to-view-id>/restricted/listado.xhtml</to-view-id>
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>editar</from-outcome>
-			<to-view-id>/editForm.xhtml</to-view-id>
+			<to-view-id>/restricted/editForm.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
-		<from-view-id>/altaForm.xhtml</from-view-id>
+		<from-view-id>/restricted/altaForm.xhtml</from-view-id>
 		<navigation-case>
 			<from-action>#{controller.salva}</from-action>
 			<from-outcome>exito</from-outcome>
-			<to-view-id>/listado.xhtml</to-view-id>
+			<to-view-id>/restricted/listado.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
-		<from-view-id>/editForm.xhtml</from-view-id>
+		<from-view-id>/restricted/editForm.xhtml</from-view-id>
 		<navigation-case>
 			<from-action>#{controller.salva}</from-action>
 			<from-outcome>exito</from-outcome>
-			<to-view-id>/listado.xhtml</to-view-id>
+			<to-view-id>/restricted/listado.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
@@ -80,7 +86,7 @@
 	<navigation-case>
 		<from-action>#{login.verify}</from-action>
 		<from-outcome>success</from-outcome>
-		<to-view-id>/opciones.xhtml</to-view-id>
+		<to-view-id>/restricted/opciones.xhtml</to-view-id>
 	</navigation-case>
 	<navigation-case>
 		<from-action>#{login.verify}</from-action>
