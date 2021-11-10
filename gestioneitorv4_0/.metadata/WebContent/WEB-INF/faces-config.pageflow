@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14468168361820" configfile="/gestioneitorv7_0/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" id="pf14478510189830" referenceLink="//@navigationRule.4/@navigationCase.1/@toViewId|" outlinks="pf14478510189832 pf14478806192450" inlinks="pf14478510189832 pf14478806192451" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="*" id="pf14478510189836" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14478806192452 pf14478806192451 pf14478806192453 pf14478806192454 pf14478806192455" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="restricted/error.xhtml" id="pf14478806192456" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14478806192452" path="/restricted/error.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="restricted/opciones.xhtml" id="pf14478806192457" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" inlinks="pf14478806192453 pf14478806192450" path="/restricted/opciones.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="restricted/altaForm.xhtml" id="pf14478806192458" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf14478806192459" inlinks="pf14478806192454" path="/restricted/altaForm.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="restricted/listado.xhtml" id="pf144788061924510" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" outlinks="pf144788061924511 pf144788061924512" inlinks="pf14478806192455 pf144788061924511 pf14478806192459 pf144788061924513" path="/restricted/listado.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="restricted/editForm.xhtml" id="pf144788061924514" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf144788061924513" inlinks="pf144788061924512" path="/restricted/editForm.xhtml"/>
+  <links id="pf14478510189832" target="pf14478510189830" source="pf14478510189830"/>
+  <links id="pf14478806192452" target="pf14478806192456" source="pf14478510189836"/>
+  <links id="pf14478806192451" target="pf14478510189830" source="pf14478510189836"/>
+  <links id="pf14478806192453" target="pf14478806192457" source="pf14478510189836"/>
+  <links id="pf14478806192454" target="pf14478806192458" source="pf14478510189836"/>
+  <links id="pf14478806192455" target="pf144788061924510" source="pf14478510189836"/>
+  <links id="pf144788061924511" target="pf144788061924510" source="pf144788061924510"/>
+  <links id="pf144788061924512" target="pf144788061924514" source="pf144788061924510"/>
+  <links id="pf14478806192459" target="pf144788061924510" source="pf14478806192458"/>
+  <links id="pf144788061924513" target="pf144788061924510" source="pf144788061924514"/>
+  <links id="pf14478806192450" target="pf14478806192457" source="pf14478510189830"/>
+</pageflow:Pageflow>
