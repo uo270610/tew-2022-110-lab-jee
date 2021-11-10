@@ -51,5 +51,21 @@ inicialización donde deben estar registradas todas las clases que implementan s
  <url-pattern>/rs/*</url-pattern>
  </servlet-mapping>
  
+ <!--Generación de la librería Javascript para acceso a servicios Web REsteasy-->
+<!-- Servlet que atenderá las consultas de clientes Javascript
+ Tiene que ser cargado después del servlet restasy.
+ -->
+ <servlet>
+ <servlet-name>resteasy-jsapi</servlet-name>
+ <servlet-class>org.jboss.resteasy.jsapi.JSAPIServlet</servlet-class>
+ <load-on-startup>2</load-on-startup>
+ </servlet>
+<!-- Regla de mapeo para la libreria Javascript -->
+<servlet-mapping> 
+ <servlet-name>resteasy-jsapi</servlet-name>
+ <url-pattern>/rest-jsapi</url-pattern>
+ </servlet-mapping>
+ 
+ 
  
 </web-app>
