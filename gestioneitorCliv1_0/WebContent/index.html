@@ -1,0 +1,138 @@
+
+<!-- 
+***************************************************
+Asignatura: Tecnologías Web
+Titulación: GIITIN
+Autor     : Cabal
+Universidad de Oviedo
+***************************************************
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tecnologias Web</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+<script
+	src="jquery/Jquery-1.11.3.min.js"></script>
+<script
+	src="bootstrap/js/bootstrap.min.js"></script>
+	
+
+</head>
+<body style="background-color: #E3CAA1">
+
+	<div class="container">
+		<!-- 
+	***************************************************
+	* CABECERA DE LA PAGINA ***************************
+	***************************************************
+	-->
+		<div class="page-header">
+			<h1>Tecnologias Web</h1>
+			<!-- 
+		***************************************************
+		* MENU  DINAMICO **********************************
+		***************************************************
+		-->
+			<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Gestioneitor</a>
+				</div>
+				<div>
+					<ul class="nav navbar-nav">
+						<li class="dropdown"><a class="dropdown-toggle"
+							data-toggle="dropdown" href="#">Alumnos<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+							   	<li><a href="crudAlumno.html" target="formulario">CRUD Alumno</a></li>
+								<li><a href="#matricularAsignaturas">Matricular
+										Asignaturas</a></li>
+								<li><a href="#desmatricularAsignaturas">Quitar
+										Asignaturas</a></li>
+							</ul></li>
+						<li class="dropdown"><a class="dropdown-toggle"
+							data-toggle="dropdown" href="#">Asignaturas<span
+								class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#altaAsignatura">Alta</a></li>
+								<li><a href="#bajaAsignatura">Baja</a></li>
+								<li><a href="#edicionAsignatura">Edicion</a></li>
+								<li><a href="#listadoAsignatura">Listado</a></li>
+							</ul></li>
+						<li class="dropdown"><a class="dropdown-toggle"
+							data-toggle="dropdown" href="#">Calificaciones<span
+								class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#calificarAlumno">Calificar</a></li>
+							</ul></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="login.html" target="formulario"><span
+								class="glyphicon glyphicon-log-in"></span> Login</a></li>
+						<li><a href="login.html" target="formulario"><span
+								class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+					</ul>
+				</div>
+			</nav>
+
+		</div>
+
+
+		<div class="row">
+
+			<!-- 
+	***************************************************
+	* SECCION PRINCIPAL DE FORMULARIOS EXTERNOS********
+	***************************************************
+	-->
+			<div class="col-md-9">
+				<object name="formulario" type="text/hetml" data="login.html" width="100%"
+					height="425px"></object>
+			</div>
+
+
+			<!-- 
+	***************************************************
+	* ELEMENTO LATERAL INFORMATIVO ********************
+	***************************************************
+	-->
+			<div class="col-md-3 bg-info">
+				<aside>
+					<header>
+						<h2>Proyecto Gestioneitor Cliente v1.0</h2>
+					</header>
+					<p>En este proyecto se incorporan las siguientes
+						características:
+					<ol>
+						<li>CRUD de la entidad alumno</li>
+						<li>Consumo de servicios Rest para las operaciones de CRUD anteriores</li>
+					</ol>
+				</aside>
+			</div>
+		</div>
+
+		<!-- 
+	***************************************************
+	* ELEMENTO PIE DE NAVEGACION** ********************
+	***************************************************
+	-->
+		<div class="panel panel-default">
+			<div class="panel-footer">
+				<nav>
+					<ul>
+						<li><a href="#">Casa</a></li>
+						<li><a href="#">Contacto</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+</html>
